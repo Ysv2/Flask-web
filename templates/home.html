@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg bg-transparent fixed-top navbarScroll p-3 " data-bs-theme="dark">
+        <nav id="navbar" class="navbar navbar-expand-lg bg-transparent fixed-top navbarScroll p-3 " data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand mb-0 h1 fs-5" href="/">Yu Sen</a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +19,10 @@
                 <div class="navbar-collapse collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#About">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="#Blog">Blog</a>
@@ -37,10 +37,10 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-        <!-- <img class="bg-img" src="./static/images/background.jpg" alt="bg image"> -->
-        <!-- <img class="bg-img" src="https://images.unsplash.com/photo-1431102996501-f6379b157668?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bg image"> -->
-        <!-- <div class="text-white container-fluid" data-mdb-theme="dark">
+        </nav> -->
+<!-- <img class="bg-img" src="./static/images/background.jpg" alt="bg image"> -->
+<!-- <img class="bg-img" src="https://images.unsplash.com/photo-1431102996501-f6379b157668?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bg image"> -->
+<!-- <div class="text-white container-fluid" data-mdb-theme="dark">
             <div class="row">
                 <div class="col-md-1">
                 </div>
@@ -56,29 +56,40 @@
                 </div>
             </div>
         </div> -->
-        <section class="bgimage">
-            <div class="container-fluid">
-                <div class="row">
+
+{% extends "base.html" %}{% block title %}Lee Yu Sen{% endblock %}
+{% block nav_home%}#home{% endblock %}
+{% block nav_about%}#about{% endblock %}
+{% block content %}
+
+<div data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+
+    <section id="home" class="bgimage">
+        <div class="container-fluid">
+            <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
                     <h2 class="title">Hi, I'm Yu Sen.</h2>
                     <p class="desc">A Year 1 Computer Engineering Student.</p>
                 </div>
-                </div>
-            </div>    
-        </section>
+            </div>
+        </div>
+    </section>
 
-        <!-- about section-->
+    <!-- about section-->
     <section id="about" class="full-height pt-4">
         <div class="container">
             <h1 class="text-center about-text pb-4">About Me</h1>
             <div class="row mt-4 about-text">
                 <div class="col-lg-4">
-                    <img src="./static/images/profile_pic.jpg" class= "imageAboutPage" alt="">
+                    <img src="./static/images/profile_pic.jpg" class="imageAboutPage" alt="">
                 </div>
 
                 <div class="col-lg-8">
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                        
+                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                        only five centuries, but also the leap into electronic typesetting, remaining essentially
+                        unchanged
+
                     </p>
                     <div class="row mt-3">
                         <div class="col-md-6">
@@ -92,20 +103,28 @@
                         <div class="col-md-6">
                             <ul>
                                 <li>Course: Computer Engineering</li>
-                                <li>Age: 28</li>
-                                <li>Occupation: Web Developer</li>
+                                <li>Interests: Robotics & Automation</li>
+                                <li>TP Engineering Scholarship Recipient</li>
 
                             </ul>
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining
+                            essentially unchanged.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining
+                            essentially unchanged.
                         </p>
                     </div>
                 </div>
             </div>
     </section>
-
+</div>
+{% endblock %}
+<!-- 
     </body>
-</html>
+</html> -->
